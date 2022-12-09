@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <h1>Maui SPA</h1>
+    <br />
+    <p>
+        <button onclick="callCs()">Call C#</button>
+    </p>
+
+    <script>
+        function callCs() {
+            invokeCs("Debug.WriteLine", "Hello from Js!");
+        }
+
+
+        // Don't pollute the global namespace, but for the sake of simplicity for this example...
+        let _data = [];
+        let _dataId = 0;
+
+        //Registers the data and calls the C# side
+        function invokeCs(command, data) {
+            //C# is calling getData async, so we have to provide a kind of data Store to be kind of "thread save"
+            _dataId++;
+            if (_dataId > 10000) {
+                _dataId = 1;
+            }
+            const dataId = _dataId;
+
+            const csData = new CsData(dataId, command, data);
+            _data.push(csData);
+
+            //Call the C# side - on the C# side the navigation is canceled but the command call will be executed after getting the data with dataId
+            // You can also send smaller amounts of data directly here in the url, but there is a limit al little above 50K (URL should stay below 50K)
+            window.location = "/api/" + dataId;
+        }
+
+        //Returns the Data for the command
+        // - I did not test the limit here but 5 MB was no problem on Windows and Android
+        function getData(dataId) {
+            const data = _data.find(i => i.dataId === dataId);
+            _data.splice(_data.indexOf(data), 1);
+            return data;
+        }
+
+        function log(data) {
+            console.log(data);
+        }
+
+        class CsData {
+            constructor(dataId, command, data) {
+                this.dataId = dataId;
+                this.command = command;
+                this.data = data;
+            }
+        }
+
+    </script>
+
+</body>
+</html>
