@@ -21,7 +21,7 @@ namespace MauiApp {
 
                         //Now Call the corresponding C# Funktion with data
                         // - this is only a simple example
-                        // - you could also get a kind of ICommand, create an instance of a class implementing ICommand dynamically from csData.command and call it's execute Method, or ...
+                        // - you could also use a ICommand Interface, create an instance of a class implementing ICommand dynamically from csData.command and call it's execute Method, or ...
                         if (cdData != null) {
                             switch (cdData.command) {
                                 case "Debug.WriteLine":
