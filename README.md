@@ -11,6 +11,9 @@ Actually we use a little trick to do this:
 - Than we get Data from the JS side
 - Than we execute the CS Function
 
+
+# C# Side
+
         public MainPage() {
             InitializeComponent();
             WebBrowser.Navigating += WebBrowserNavigating;
@@ -43,13 +46,15 @@ Actually we use a little trick to do this:
             }
         }
 
+# HTML
 
-    <h1>Maui SPA</h1>
-    <br />
-    <p>
-        <button onclick="callCs()">Call C#</button>
-    </p>
+            <h1>Maui SPA</h1>
+            <br />
+            <p>
+                <button onclick="callCs()">Call C#</button>
+            </p>
 
+# JS
 
        function callCs() {
             invokeCs("Debug.WriteLine", "Hello from Js!");
