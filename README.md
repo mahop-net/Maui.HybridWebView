@@ -9,9 +9,10 @@ The other way around is supported natively by Maui WebView
 
 Actually I use a little trick to do this:
 
-- First I catch the Navigating event of the WebView
-- Than I get the data from the JS side
-- Than I execute the CS Function
+- C#: First I catch the Navigating event of the WebView and cancel the navigation if the url contains /api/
+- JS: Than I can navigate to a /api/... url in JS
+- CS: Than I get the data from the JS side (because url can not be very long)
+- CS: Than I execute the CS Function
 
 
 # C# Side
