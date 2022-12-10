@@ -11,7 +11,7 @@ Actually I use a little trick to do this:
 
 - First I catch the Navigating event of the WebView
 - Than I get the data from the JS side
-- Than we execute the CS Function
+- Than I execute the CS Function
 
 
 # C# Side
