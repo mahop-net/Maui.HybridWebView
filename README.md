@@ -6,11 +6,12 @@ The other way around is supported natively by Maui WebView
 
 The project was build after the great work started here:
 https://github.com/nmoschkin/MAUIWebViewExample
+Done by @nmoschkin 
 
-Actually we use a little trick to do this:
+Actually I use a little trick to do this:
 
-- First we catch the Navigating event
-- Than we get Data from the JS side
+- First I catch the Navigating event of the WebView
+- Than I get the data from the JS side
 - Than we execute the CS Function
 
 
