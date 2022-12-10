@@ -4,9 +4,8 @@ Maui sample project providing a WebView with JS -> C# (and C# -> JS) Interopt fo
 Small sample solution how you can call C# side from JS Code.
 The other way around is supported natively by Maui WebView
 
-The project was build after the great work started here:
-https://github.com/nmoschkin/MAUIWebViewExample
-Done by @nmoschkin 
+- The project was build after the great work started here: https://github.com/nmoschkin/MAUIWebViewExample Done by @nmoschkin 
+- There is also a disscussion here: https://github.com/dotnet/maui/issues/6446
 
 Actually I use a little trick to do this:
 
