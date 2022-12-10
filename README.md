@@ -1,7 +1,7 @@
 # Maui.HybridWebView
-Maui sample project providing a WebView with JS -> C# and C# -> JS Interopt for building JS / HTML SPAs on all supported Maui platforms using C# as a "backend".
+Maui sample project providing a WebView with JS -> C# (and C# -> JS) Interopt for building JS / HTML SPAs on all supported Maui platforms using C# as a "backend".
 
-Small sample solution how you can call C# side from JS Code 
+Small sample solution how you can call C# side from JS Code.
 The other way around is supported natively by Maui WebView
 
 The project was build after the great work started here:
