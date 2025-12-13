@@ -1,4 +1,4 @@
-# Update Ende of 2025
+# Update (Dez 2025)
 Maui provides a HybridWebView with two way communication now. See:
 
 https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/hybridwebview?view=net-maui-10.0
