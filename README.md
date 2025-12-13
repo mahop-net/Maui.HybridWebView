@@ -1,7 +1,9 @@
 # Update Ende of 2025
 Maui provides a HybridWebView with two way communication now. See:
+
 https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/hybridwebview?view=net-maui-10.0
 
+<hr/>
 
 # Maui.HybridWebView
 Maui sample project providing a WebView with JS -> C# (and C# -> JS) Interopt for building JS / HTML SPAs on all supported Maui platforms using C# as a "backend".
